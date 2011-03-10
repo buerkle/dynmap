@@ -79,7 +79,7 @@ public class FlatMap extends MapType {
                 int mx = x + t.x * t.size;
                 int mz = y + t.y * t.size;
                 int my = w.getHighestBlockYAt(mx, mz) - 1;
-                int blockType = w.getBlockTypeIdAt(mx, my, mz);
+                int blockType = w.getBlockAt(mx, my, mz).getTypeId();
                 Color[] colors = colorScheme.colors.get(blockType);
                 if (colors == null)
                     continue;

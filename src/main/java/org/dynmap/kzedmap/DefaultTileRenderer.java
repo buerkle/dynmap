@@ -115,7 +115,7 @@ public class DefaultTileRenderer implements MapTileRenderer {
             if (y < 0)
                 return translucent;
 
-            int id = world.getBlockTypeIdAt(x, y, z);
+            int id = world.getBlockAt(x, y, z).getTypeId();
 
             switch (seq) {
             case 0:
